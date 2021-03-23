@@ -76,6 +76,10 @@ $ git config --global user.email "email@example.com"
 - clone
 - (待补充)
 
+### 如何使用git从远程拉取分支代码（最直接易懂）
+
+https://blog.csdn.net/weixin_45416217/article/details/100119585
+
 # 命令
 
 repository：版本库，被git管理的目录
