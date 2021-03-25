@@ -1,3 +1,5 @@
+# 阶段目标
+
 March 22. Output a resume.
 
 
@@ -53,8 +55,6 @@ eslint的两个文件.eslintignore和.eslintrc.js的作用是什么？
  待学习知识点：
  冴羽的博客 js专题14~20 函数式编程
  冴羽的博客 ES6部分
-
-# 复习要点
 
 # 复习要点
 

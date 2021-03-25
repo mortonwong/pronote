@@ -49,7 +49,7 @@ $ git config --global user.email "email@example.com"
 
 1.新建本地分支
 
-`git branch -b feature/分支名@英文名`
+`git checkout -b feature/分支名@英文名`
 
 2.新建远程分支
 
@@ -79,6 +79,11 @@ $ git config --global user.email "email@example.com"
 ### 如何使用git从远程拉取分支代码（最直接易懂）
 
 https://blog.csdn.net/weixin_45416217/article/details/100119585
+
+### Git-从远程分支更新最新代码到本地
+
+分支拉取：git pull origin “分支名”
+主干拉取：git pull
 
 # 命令
 
