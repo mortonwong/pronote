@@ -77,25 +77,35 @@ localeCompare()
 String()
 
 ## Array
+### 函数
 
-生成新数组
+#### 数组查找
+```js
+Array.prototype.indexOf(searchValue[,fromIndex]) //索引,没有则返回-1
+```
+#### 数组头插尾插和弹出
+```js
+Array.prototype.shift() //头弹
+Array.prototype.unshift(item[,item2,item3...]) //头插,返回新长度
+Array.prototype.pop() //尾弹
+Array.prototype.push() //尾插,返回新长度
+```
+### return分类 
+#### 生成新数组
+```js
+Array.prototype.slice([start[,end]]) : //返回一个新数组,不包括end
 
-Array.prototype.slice(start,end) : 返回一个新数组
-
-Array.prototype.concat([可选的数组or元素列表]) ：返回一个新数组
-
-改变原数组
-
-Array.prototype.splice(index,howmany[,item[,item2]]) 改变原始数组
+Array.prototype.concat([可选的数组or元素列表]) ：//返回一个新数组
+```
+#### 改变原数组
+```js
+Array.prototype.splice(index[,deleteCount][,item[,item2]]) //改变原始数组,添加or删除元素
 
 Array.prototype.reverse()
 
-Array.prototype.sort(compare(value1,value2))   value1和value2的顺序，交换返回1，不交换返回-1，相等返回0 
+Array.prototype.sort(compare(value1,value2))   //value1和value2的顺序，交换返回1，不交换返回-1，相等返回0 
 
-数组查找
-
-Array.prototype.indexOf(searchvalue,fromIndex) 返回index,没有则返回-1
-
+```
 # DOM
 
 ## document

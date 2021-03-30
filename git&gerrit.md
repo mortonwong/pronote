@@ -45,49 +45,68 @@ $ git config --global user.email "email@example.com"
 
 # 工作流程
 
-## gerrit提审流程
+### 推送流程
 
-1.新建本地分支
+```bash
+git checkout -b feature/plan_adv_top@morton.huang
+git push origin feature/plan_adv_top@morton.huang:feature/plan_adv_top@morton.huang
 
-`git checkout -b feature/分支名@英文名`
+在vscode操作：
+add
+commit
+push
 
-2.新建远程分支
+如果是gerrit项目，自己写push：
+git push origin HEAD:refs/for/feature/top_adv@morton.huang
+http://gerrit.test.com/dashboard/self 查看提审
 
-`git push origin feature/分支名@英文名:feature/分支名@英文名`
+此时，gerrit上已经有自己的分支，提审过了就流到gitlab
 
-3.暂存更改
+将自己分支合并到develop：
+git checkout develop
+git merge 自己分支名
+git push
+项目将自动构建
+```
 
-可以用vscode直接操作(git add)
 
-4.提交更改
 
-`git commit -m "注解"`
+### 删除远程分支
 
-5.推送到gerrit
-
-`git push origin HEAD:refs/for/feature/分支名@英文名`
-
-6.http://gerrit.test.com/dashboard/self 查看提审
-
-7.
-
-### 拉代码流程
-
-- clone
-- (待补充)
-
-### 如何使用git从远程拉取分支代码（最直接易懂）
+### Git从远程拉取分支代码
 
 https://blog.csdn.net/weixin_45416217/article/details/100119585
 
-### Git-从远程分支更新最新代码到本地
+### Git从远程分支更新最新代码到本地
 
 分支拉取：git pull origin “分支名”
 主干拉取：git pull
 
+## 子模块代码拉取
+
+git submodule update --init --recursive
+
+or
+
+git submodule init 
+
+git submodule update
+
 # 命令
 
-repository：版本库，被git管理的目录
+### git clone克隆
+
+```bash
+git clone git@repo.we.com:morton.huang/homeapp.git
+```
+
+如果要指定不同的目录名，可以将目录名作为`git clone`命令的第二个参数。
+
+ ```javascript
+ $ git clone <版本库的网址> <本地目录名>
+ ```
+
+
 
 初始化repository，将当前目录成为repository
 
@@ -138,11 +157,7 @@ git merge 分支名
 git rebase 分支名
 ```
 
-从远程仓库克隆
 
-```bash
-git clone git@repo.we.com:morton.huang/homeapp.git
-```
 
 查看有无文件没被提交
 
@@ -167,4 +182,5 @@ $ git log
 - `HEAD`指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令`git reset --hard commit_id`。
 - 穿梭前，用`git log`可以查看提交历史，以便确定要回退到哪个版本。
 - 要重返未来，用`git reflog`查看命令历史，以便确定要回到未来的哪个版本。
+  - 
 
