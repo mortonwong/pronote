@@ -47,7 +47,8 @@ $ git config --global user.email "email@example.com"
 
 ### 推送流程
 
-```bash
+```git commit
+# 新建
 git checkout -b feature/plan_adv_top@morton.huang
 git push origin feature/plan_adv_top@morton.huang:feature/plan_adv_top@morton.huang
 
@@ -75,14 +76,20 @@ git push
 
 ### Git从远程拉取分支代码
 
-https://blog.csdn.net/weixin_45416217/article/details/100119585
+```bash
+git fetch origin dev（dev为远程仓库的分支名）
+
+git checkout -b dev(本地分支名称) origin/dev(远程分支名称)
+
+git pull origin dev(远程分支名称)
+```
 
 ### Git从远程分支更新最新代码到本地
 
 分支拉取：git pull origin “分支名”
 主干拉取：git pull
 
-## 子模块代码拉取
+### 子模块代码拉取
 
 git submodule update --init --recursive
 
@@ -91,6 +98,11 @@ or
 git submodule init 
 
 git submodule update
+### 提示权限不够解决办法
+```bash
+sudo chown your_user_name your_folder_name -R
+  -R表示递归。
+```
 
 # 命令
 
@@ -106,8 +118,10 @@ git clone git@repo.we.com:morton.huang/homeapp.git
  $ git clone <版本库的网址> <本地目录名>
  ```
 
+### 删除本地分支
+git branch -d 分知名
 
-
+### 其他
 初始化repository，将当前目录成为repository
 
 ```bash
