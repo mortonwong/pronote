@@ -93,7 +93,7 @@ Array.prototype.push() //尾插,返回新长度
 ### return分类 
 #### 生成新数组
 ```js
-Array.prototype.slice([start[,end]]) : //返回一个新数组,不包括end
+Array.prototype.slice([start[,end]]) : //返回一个新数组，不包括end（一些情况可以理解成length）
 
 Array.prototype.concat([可选的数组or元素列表]) ：//返回一个新数组
 ```

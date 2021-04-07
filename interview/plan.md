@@ -1,8 +1,9 @@
 # 阶段目标
+前端调试方法
+https://juejin.cn/post/6850037276794322957#heading-4
+https://juejin.cn/post/6902333925562499086
 
-March 22. Output a resume.
-
-
+tslint
 
 Shortcoming (from experience):
 
