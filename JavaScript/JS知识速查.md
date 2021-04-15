@@ -75,7 +75,12 @@ localeCompare()
 ### 全局方法(属于global对象)
 
 String()
+### 模板字符串
+```js
+let a=5,b=1;
+console.log(`a的值为${a}, b的值为${b}, a+b的值为${a+b}`)
 
+```
 ## Array
 ### 函数
 
@@ -106,6 +111,9 @@ Array.prototype.reverse()
 Array.prototype.sort(compare(value1,value2))   //value1和value2的顺序，交换返回1，不交换返回-1，相等返回0 
 
 ```
+## Map
+### 创建方式
+
 # DOM
 
 ## document

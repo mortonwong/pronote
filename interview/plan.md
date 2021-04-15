@@ -3,6 +3,8 @@
 https://juejin.cn/post/6850037276794322957#heading-4
 https://juejin.cn/post/6902333925562499086
 
+代码写在created还是mounted
+
 tslint
 
 Shortcoming (from experience):
@@ -212,7 +214,7 @@ https://www.nowcoder.com/discuss/513379?type=post&order=time&pos=&page=2&channel
 
 - **substring和slice的区别**
 
-- **多个请求 并行串行 max
+- **多个请求 并行串行 max**
 
 - **求不大于n的指数**
 

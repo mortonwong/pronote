@@ -47,10 +47,10 @@ $ git config --global user.email "email@example.com"
 
 ### 推送流程
 
-```git commit
+```bash
 # 新建
-git checkout -b feature/plan_adv_top@morton.huang
-git push origin feature/plan_adv_top@morton.huang:feature/plan_adv_top@morton.huang
+git checkout -b feature/guide_change@morton.huang
+git push origin feature/guide_change@morton.huang:feature/guide_change@morton.huang
 
 在vscode操作：
 add
@@ -58,7 +58,8 @@ commit
 push
 
 如果是gerrit项目，自己写push：
-git push origin HEAD:refs/for/feature/top_adv@morton.huang
+git push origin HEAD:refs/for/release/4.10.4-camera.1
+ 
 http://gerrit.test.com/dashboard/self 查看提审
 
 此时，gerrit上已经有自己的分支，提审过了就流到gitlab
@@ -74,12 +75,16 @@ git push
 
 ### 删除远程分支
 
+### 合并远程分支
+git checkout 先切到被合的分支
+git merge origin/远程分支名 然后合并 
 ### Git从远程拉取分支代码
 
 ```bash
 git fetch origin dev（dev为远程仓库的分支名）
 
-git checkout -b dev(本地分支名称) origin/dev(远程分支名称)
+git checkout -b smart_camera(本地分支名称) origin/feature/smart_camera@xiong.zhou(远程分支名称)
+git checkout -b smart_camera origin/feature/smart_camera@xiong.zhou
 
 git pull origin dev(远程分支名称)
 ```
