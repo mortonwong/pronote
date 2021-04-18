@@ -110,7 +110,18 @@ sudo chown your_user_name your_folder_name -R
 ```
 
 # 命令
+## fetch
+fetch只是取回远端的更新，不会影响本地的代码
+```bash
+# 取回全部更新
+git fetch origin
+# 取回指定更新 
+git fetch 远端主机 远端分支
+```
 
+## 基于远端创建本地分支
+
+## 以往总结
 ### git clone克隆
 
 ```bash
@@ -196,10 +207,10 @@ $ git diff readme.txt
 $ git log
 ```
 
-版本回退
+### 版本回退
 
 - `HEAD`指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令`git reset --hard commit_id`。
 - 穿梭前，用`git log`可以查看提交历史，以便确定要回退到哪个版本。
 - 要重返未来，用`git reflog`查看命令历史，以便确定要回到未来的哪个版本。
-  - 
+
 

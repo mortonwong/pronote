@@ -1,4 +1,10 @@
 # 阶段目标
+
+js原理
+webpack原理
+vue原理
+nodeJs原理
+
 前端调试方法
 https://juejin.cn/post/6850037276794322957#heading-4
 https://juejin.cn/post/6902333925562499086
